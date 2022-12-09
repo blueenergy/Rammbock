@@ -11,11 +11,7 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-import sys
-import os
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.dirname(SCRIPT_DIR))
-from templates.containers import Protocol, MessageTemplate, StructTemplate, ListTemplate, \
-    UnionTemplate, BinaryContainerTemplate, ConditionalTemplate, TBCDContainerTemplate
-from templates.primitives import UInt, Int, Char, PDU, Binary, Length, TBCD
+from .robotbackgroundlogger import BackgroundLogger
+
+logger = BackgroundLogger()

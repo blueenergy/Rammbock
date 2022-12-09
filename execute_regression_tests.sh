@@ -6,4 +6,4 @@ if [ -z "$*" ]
     then
       default_target="$base/atest"
 fi
-pybot -c regression --exclude background -L debug --pythonpath "$base/src/" $default_target "$@"
+robot -c regression --exclude background -L debug --pythonpath "$base/src/" $default_target "$@"
